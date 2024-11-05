@@ -3,15 +3,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './Header.module.scss';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 
-const roboto = Roboto({ subsets: ['latin'], weight: ['100', '300'] });
-
 export default function Header() {
   return (
-    <header className={`${styles.header} ${roboto.className}`}>
-      <div>
+    <header className={styles.header}>
+      <div className={styles.logo}>
         <p>MyMovieApp</p>
       </div>
-      <div>
+      <div className={styles.navigation}>
         <nav>
           <ul>
             <li>Séries</li>

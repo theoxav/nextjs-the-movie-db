@@ -1,8 +1,10 @@
-import styles from "./page.module.scss";
+import styles from './page.module.scss';
+import MediaCard from '@/components/MediaCard/MediaCard';
 
 export default function Home() {
-    return (
-        <div className={styles.main}>
-        </div>
-    );
+  return (
+    <div className={styles.main}>
+      <MediaCard />
+    </div>
+  );
 }
