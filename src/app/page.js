@@ -4,7 +4,7 @@ import MediaCard from '@/components/MediaCard/MediaCard';
 export default function Home() {
   return (
     <div className={styles.main}>
-      <MediaCard />
+      <MediaCard mediaId={10} />
     </div>
   );
 }
