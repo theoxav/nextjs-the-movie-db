@@ -3,6 +3,12 @@
 body {
   margin: 0;
 }
+
+h2 {
+  color: $secondaryColor;
+  font-weight: bold;
+}
+
 a {
   text-decoration: none;
   color: unset;
@@ -22,10 +28,6 @@ a {
     margin: 0;
     font-size: 100px;
     font-weight: 700;
-  }
-  h2 {
-    color: $secondaryColor;
-    font-weight: bold;
   }
 
   p {
