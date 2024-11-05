@@ -3,7 +3,7 @@ import MediaCard from '../MediaCard/MediaCard';
 import styles from './Popular.module.scss';
 
 const Popular = async () => {
-  const { results } = await await getMovieByPath('/movie/popular');
+  const { results } = await getMovieByPath('/movie/popular');
   const popularMovies = results.slice(0, 6);
 
   return (

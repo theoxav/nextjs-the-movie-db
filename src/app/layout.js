@@ -1,7 +1,8 @@
-import Header from '@/components/Header/Header';
-import '@fortawesome/fontawesome-svg-core/styles.css';
-import './globals.scss';
+import Header from '@/components/layouts/Header/Header';
 import { roboto, montserrat } from '../../fonts';
+
+import './globals.scss';
+import '@fortawesome/fontawesome-svg-core/styles.css';
 
 export const metadata = {
   title: 'Create Next App',
