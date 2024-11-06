@@ -7,7 +7,7 @@ const Form = () => {
   const router = useRouter();
   const pathname = usePathname();
 
-  const handleSUbmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
     const searchParams = new URLSearchParams();
@@ -15,11 +15,13 @@ const Form = () => {
     searchParams.append('release_date.gte', form.get('fromDate'));
     searchParams.append('release_date.lte', form.get('toDate'));
 
+    console.log(searchParams.toString());
+
     router.push(`${pathname}?${searchParams.toString()}`);
   };
 
   return (
-    <form className={styles.container} onSubmit={handleSUbmit}>
+    <form className={styles.container} onSubmit={handleSubmit}>
       <h2>Filtrer</h2>
       <div className={styles.date}>
         <h3>Date de sortie</h3>
@@ -42,7 +44,7 @@ const Form = () => {
         <select name="sort">
           <option value={'popularity.desc'}>Popularité</option>
           <option value={'vote_average.desc'}>Note</option>
-          <option value={'vote_count.desc'}>Nombre de notes</option>
+          <option value={'cote_count.desc'}>Nombre de notes</option>
         </select>
       </div>
       <input type="submit" value="Rechercher" />
