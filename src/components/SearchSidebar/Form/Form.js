@@ -15,8 +15,6 @@ const Form = () => {
     searchParams.append('release_date.gte', form.get('fromDate'));
     searchParams.append('release_date.lte', form.get('toDate'));
 
-    console.log(searchParams.toString());
-
     router.push(`${pathname}?${searchParams.toString()}`);
   };
 

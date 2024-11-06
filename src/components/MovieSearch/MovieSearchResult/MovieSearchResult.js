@@ -3,11 +3,11 @@ import Link from 'next/link';
 
 import styles from './MovieSearchResults.module.scss';
 
-const MovieSearchResult = ({ movieResults }) => {
+const MovieSearchResult = ({ movieResults, onResultClick }) => {
   return (
     <div className={styles.searchResults}>
       {movieResults.map((movie) => (
-        <div key={movie.id}>
+        <div key={movie.id} onClick={onResultClick}>
           <Link href={`/movies/${movie.id}`}>
             <Image
               width={90}
