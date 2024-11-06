@@ -24,7 +24,7 @@ const SearchSidebar = ({ genres }) => {
 
   return (
     <div className={styles.sidebar}>
-      <h1>Tous les {title}</h1>
+      <h1>Tous les &quot;{title}&quot;</h1>
       <Form />
     </div>
   );
