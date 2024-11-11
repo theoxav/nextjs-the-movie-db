@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import styles from './MovieDetails.module.scss';
+import { Suspense } from 'react';
+import MovieCredits from '../MovieCredits/MovieCredits';
 
 const MovieDetails = ({ movie }) => {
   return (
@@ -25,6 +27,21 @@ const MovieDetails = ({ movie }) => {
               ({new Date(movie.release_date).toLocaleDateString('fr-FR')})
             </span>
           </h1>
+          <p className={styles.production}>
+            Production:{' '}
+            <span>
+              {movie.production_companies
+                .map((company) => company.name)
+                .join(', ')}
+            </span>
+          </p>
+          <h2>Synopsis</h2>
+          <p className={styles.overview}>{movie.overview}</p>
+          <div className={styles.credits}>
+            <Suspense fallback={<p>Chargement...</p>}>
+              <MovieCredits movieId={movie.id} />
+            </Suspense>
+          </div>
         </div>
       </div>
     </div>
