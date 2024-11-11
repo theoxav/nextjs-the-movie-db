@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './Header.module.scss';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
-import MovieSearch from '@/components/MovieSearch/MovieSearch';
+import MovieSearch from '@/components/movies/MovieSearch/MovieSearch';
 
 export default function Header() {
   return (

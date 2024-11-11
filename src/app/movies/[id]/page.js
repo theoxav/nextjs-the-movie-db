@@ -1,4 +1,4 @@
-import MovieDetails from '@/components/MovieDetails/MovieDetails';
+import MovieDetails from '@/components/movies/MovieDetails/MovieDetails';
 import { getMovieByPath } from '@/services/movies';
 import { notFound } from 'next/navigation';
 

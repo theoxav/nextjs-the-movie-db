@@ -1,8 +1,8 @@
 import { getMovieByPath } from '@/services/movies';
-import MediaCard from '../MediaCard/MediaCard';
-import styles from './Popular.module.scss';
+import MovieCardItem from '../movies/MovieCardItem/MovieCardItem';
+import styles from './PopularMovies.module.scss';
 
-const Popular = async () => {
+const PopularMovies = async () => {
   const { results } = await getMovieByPath('/movie/popular');
   const popularMovies = results.slice(0, 6);
 
@@ -11,11 +11,11 @@ const Popular = async () => {
       <h2>Les plus populaires</h2>
       <div className={styles.container}>
         {popularMovies.map((movie) => (
-          <MediaCard key={movie.id} media={movie} />
+          <MovieCardItem key={movie.id} media={movie} />
         ))}
       </div>
     </div>
   );
 };
 
-export default Popular;
+export default PopularMovies;

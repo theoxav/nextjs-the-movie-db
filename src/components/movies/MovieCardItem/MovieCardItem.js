@@ -1,8 +1,8 @@
-import styles from './MediaCard.module.scss';
+import styles from './MovieCardItem.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const MediaCard = ({ media }) => {
+const MovieCardItem = ({ media }) => {
   return (
     <div className={styles.card}>
       <Link href={`/movies/${media.id}`}>
@@ -23,4 +23,4 @@ const MediaCard = ({ media }) => {
   );
 };
 
-export default MediaCard;
+export default MovieCardItem;
