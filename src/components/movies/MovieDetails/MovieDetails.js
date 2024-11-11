@@ -3,7 +3,7 @@ import styles from './MovieDetails.module.scss';
 import { Suspense } from 'react';
 import MovieCredits from '../MovieCredits/MovieCredits';
 
-const MovieDetails = ({ movie }) => {
+const MovieDetails = ({ movie, locale }) => {
   return (
     <div className={styles.details}>
       <div className={styles.background}>
@@ -39,7 +39,7 @@ const MovieDetails = ({ movie }) => {
           <p className={styles.overview}>{movie.overview}</p>
           <div className={styles.credits}>
             <Suspense fallback={<p>Chargement...</p>}>
-              <MovieCredits movieId={movie.id} />
+              <MovieCredits movieId={movie.id} locale={locale} />
             </Suspense>
           </div>
         </div>

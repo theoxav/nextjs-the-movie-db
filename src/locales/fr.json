@@ -1,0 +1,28 @@
+{
+  "header": {
+    "movies": "Films",
+    "series": "Séries",
+    "search-placeholder": "Rechercher un film..."
+  },
+  "movies": {
+    "all": "Tous les ",
+    "movies": "Films",
+    "form": {
+      "filter": "Filtrer",
+      "release-date": "Date de sortie",
+      "sort-by": "Trier par",
+      "search": "Rechercher",
+      "popularity": "Popularité",
+      "vote-average": "Moyenne des votes",
+      "vote-count": "Nombre de votes",
+      "from": "Du",
+      "to": "Au"
+    }
+  },
+  "popular": {
+    "title": "Les plus populaires"
+  },
+  "genres": {
+    "title": "Parcourir par genres"
+  }
+}

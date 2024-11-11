@@ -1,11 +1,13 @@
 'use client';
 
+import useDictionary from '@/hooks/useDictionary';
 import styles from './Form.module.scss';
 import { useRouter, usePathname } from 'next/navigation';
 
 const Form = () => {
   const router = useRouter();
   const pathname = usePathname();
+  const i18n = useDictionary();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -20,16 +22,16 @@ const Form = () => {
 
   return (
     <form className={styles.container} onSubmit={handleSubmit}>
-      <h2>Filtrer</h2>
+      <h2>{i18n?.movies?.form?.filter}</h2>
       <div className={styles.date}>
-        <h3>Date de sortie</h3>
+        <h3>{i18n?.movies?.form?.['release-date']}</h3>
 
         <div>
-          <p>Du</p>
+          <p>{i18n?.movies?.form?.from}</p>
           <input type="date" name="fromDate" />
         </div>
         <div>
-          <p>au</p>
+          <p>{i18n?.movies?.form?.to}</p>
           <input
             type="date"
             name="toDate"
@@ -38,14 +40,20 @@ const Form = () => {
         </div>
       </div>
       <div>
-        <h3>Trier par</h3>
+        <h3>{i18n?.movies?.form?.['sort-by']}</h3>
         <select name="sort">
-          <option value={'popularity.desc'}>Popularité</option>
-          <option value={'vote_average.desc'}>Note</option>
-          <option value={'cote_count.desc'}>Nombre de notes</option>
+          <option value={'popularity.desc'}>
+            {i18n?.movies?.form?.popularity}
+          </option>
+          <option value={'vote_average.desc'}>
+            {i18n?.movies?.form?.['vote-average']}
+          </option>
+          <option value={'cote_count.desc'}>
+            {i18n?.movies?.form?.['vote-count']}
+          </option>
         </select>
       </div>
-      <input type="submit" value="Rechercher" />
+      <input type="submit" value={i18n?.movies?.form?.search} />
     </form>
   );
 };

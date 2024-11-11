@@ -2,8 +2,12 @@ import { getMovieByPath } from '@/services/movies';
 import styles from './MovieCredits.module.scss';
 import Image from 'next/image';
 
-const MovieCredits = async ({ movieId }) => {
-  const { cast } = await getMovieByPath(`/movie/${movieId}/credits`);
+const MovieCredits = async ({ movieId, locale }) => {
+  const { cast } = await getMovieByPath(
+    `/movie/${movieId}/credits`,
+    [],
+    locale
+  );
 
   return (
     <div className={styles.credits}>

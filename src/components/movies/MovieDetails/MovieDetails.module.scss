@@ -1,6 +1,7 @@
 @import '@/styles/variables.scss';
 .details {
   position: relative;
+  z-index: 2;
   width: 100%;
   min-height: 60vh;
   .background {

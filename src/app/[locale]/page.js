@@ -5,11 +5,11 @@ import styles from './page.module.scss';
 
 export const revalidate = 86400;
 
-export default function Home() {
+export default function Home({ params: { locale } }) {
   return (
     <div className={styles.main}>
-      <PopularMovies />
-      <Genres />
+      <PopularMovies locale={locale} />
+      <Genres locale={locale} />
     </div>
   );
 }
