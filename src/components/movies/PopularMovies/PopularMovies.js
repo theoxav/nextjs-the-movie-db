@@ -1,5 +1,5 @@
 import { getMovieByPath } from '@/services/movies';
-import MovieCardItem from '../movies/MovieCardItem/MovieCardItem';
+import MovieCardItem from '../MovieCardItem/MovieCardItem';
 import styles from './PopularMovies.module.scss';
 
 const PopularMovies = async () => {

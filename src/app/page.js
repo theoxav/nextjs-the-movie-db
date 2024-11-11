@@ -1,5 +1,5 @@
 import Genres from '@/components/Genres/Genres';
-import PopularMovies from '@/components/PopularMovies/PopularMovies';
+import PopularMovies from '@/components/movies/PopularMovies/PopularMovies';
 
 import styles from './page.module.scss';
 
