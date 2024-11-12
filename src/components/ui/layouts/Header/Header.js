@@ -25,12 +25,17 @@ const Header = async ({ locale }) => {
             <li>
               <Link href={`/${locale}/movies`}>{i18n.header.movies}</Link>
             </li>
+            <li>
+              <Link href={`/${locale}/signup`}>Inscription</Link>
+            </li>
           </ul>
         </nav>
       </div>
       <div>
         <MovieSearch />
-        <FontAwesomeIcon icon={faUser} />
+        <Link href={`/${locale}/user/profile`}>
+          <FontAwesomeIcon icon={faUser} />
+        </Link>
       </div>
       <LanguageSelector />
     </header>
