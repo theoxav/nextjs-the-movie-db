@@ -19,10 +19,10 @@ export default function RootLayout({ children, params: { locale } }) {
   return (
     <html lang="en">
       <body className={`${roboto.variable} ${montserrat.variable}`}>
-        <Header locale={locale} />
-        <main>
-          <AuthProvider>{children}</AuthProvider>
-        </main>
+        <AuthProvider>
+          <Header locale={locale} />
+          <main>{children}</main>
+        </AuthProvider>
       </body>
     </html>
   );

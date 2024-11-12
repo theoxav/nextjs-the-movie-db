@@ -41,16 +41,13 @@ const MovieSearch = () => {
   }, []);
 
   return (
-    <div
-      ref={containerRef}
-      className={styles.searchContainer}
-      onMouseDown={() => setIsFocused(true)}
-    >
+    <div ref={containerRef} onMouseDown={() => setIsFocused(true)}>
       <DebounceInput
         minLength={2}
         debounceTimeout={500}
         onChange={(e) => updateMovieSearch(e.target.value)}
         placeholder={i18n?.header?.['search-placeholder']}
+        className={styles.searchContainer}
       />
 
       {movieResults.length > 0 && isFocused && (
