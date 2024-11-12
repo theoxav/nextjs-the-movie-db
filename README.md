@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# The Movie DB
 
-## Getting Started
+This is a `Next.js` application that allows users to search for movies and view detailed information about them. It is powered by various modern technologies including `i18n` for localization, `NextAuth` for authentication, `Prisma` for database management, `SCSS` for styling, and `bcrypt` for password hashing.
 
-First, run the development server:
+## Features
+
+
+- **Movie Search** :  Search for movies using a dynamic search input that fetches results from a movie API.
+- **Internationalization** :  Supports multiple languages for a localized user experience.
+- **User Authentication** : Utilizes `NextAuth` for secure authentication with session management.
+- **Like Movies** : Allows users to like a movie and add it to their personal list of liked movies.
+
+
+## Installation
+
+1. **Clone the repository** :
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+   git clone https://github.com/your-repository/nextjs-the-movie-db.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Install dependencies** :
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```bash
+   npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. **Set up environment variable** :
 
-## Learn More
+Create a  `.env.local` file in the root of your project and configure the required
 
-To learn more about Next.js, take a look at the following resources:
+5. **Run the development server** :
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+    npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Technologies Used
 
-## Deploy on Vercel
+- ![Next.js](https://img.shields.io/badge/Next.js-%23000000?style=flat&logo=next.js&logoColor=white)
+- ![i18n](https://img.shields.io/badge/i18n-%234CAF50?style=flat&logo=i18next&logoColor=white)
+- ![NextAuth.js](https://img.shields.io/badge/NextAuth.js-%23000000?style=flat&logo=next-auth&logoColor=white)
+- ![Prisma](https://img.shields.io/badge/Prisma-%2300A7E1?style=flat&logo=prisma&logoColor=white)
+- ![bcrypt](https://img.shields.io/badge/bcrypt-%231B73B2?style=flat&logo=bcrypt&logoColor=white)
+- ![SCSS](https://img.shields.io/badge/SCSS-%23CC6699?style=flat&logo=sass&logoColor=white)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
